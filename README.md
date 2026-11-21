@@ -11,7 +11,7 @@ The app repo's GitHub Actions pipeline builds a versioned image, pushes it to JF
 | Path | What it is |
 | --- | --- |
 | `k8s/deployment.yaml` | The Deployment ArgoCD syncs: one replica of the bot, pulled from JFrog using `jfrog-registry-secret`, with Slack credentials read from the `slack-env` secret |
-| `k8s/service.yaml` | NodePort Service exposing the bot on port 3000 |
+| `k8s/service.yaml` | NodePort Service (port 80 → container 3000, node port 30080) |
 | `helm/slack-bolt-app/` | A Helm chart scaffold for the same app (not yet wired to the real image or values) |
 
 ## Cluster prerequisites
