@@ -1,4 +1,4 @@
-# ArgoCD
+# slack-bolt-gitops
 
 GitOps deployment repo for [slack-bolt-app](https://github.com/arion849/slack-bolt-app). ArgoCD watches this repo and syncs the cluster to whatever it contains, so a deploy is just a commit here.
 
